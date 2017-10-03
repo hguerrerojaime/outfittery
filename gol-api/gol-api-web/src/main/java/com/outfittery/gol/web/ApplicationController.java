@@ -11,7 +11,7 @@ import java.util.Set;
  */
 @RestController
 public class ApplicationController {
-    
+
     @RequestMapping(value="/",method = RequestMethod.POST)
     public Set<Cell> nextState(@RequestBody GridCommand command) {
         Grid grid = new Grid(command.getWidth(),command.getHeight(),command.getLiveCells());

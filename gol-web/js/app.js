@@ -44,6 +44,10 @@ angular.module('gol',[])
      });
   };
 
+  $scope.autoRun = function() {
+     window.setInterval($scope.callNextState, 1000);
+  };
+
   $scope.checkCell = function(x,y) {
      var element = document.getElementById("check-"+x+"-"+y);
 
