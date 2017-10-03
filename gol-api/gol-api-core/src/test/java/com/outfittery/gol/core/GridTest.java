@@ -5,7 +5,10 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.fail;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by hguerrero on 3/10/17.
@@ -62,6 +65,17 @@ public class GridTest {
         assertEquals(expectedAdjacentCount,actualAdjacentCount);
         assertFalse(adjacentCells.contains(new Cell(3, 2)));
 
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void verifyThatWhenAddingACellOutOfBoundsThrowsAnException() {
+
+        Grid grid = new Grid(5,5,new HashSet<Cell>());
+
+        grid.addCell(new Cell(20,43));
+
+
+        fail("IllegalArgumentException expected");
     }
 
     @Test
