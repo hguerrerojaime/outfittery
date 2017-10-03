@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gol-api.iml" filepath="$PROJECT_DIR$/gol-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gol-api-core/gol-api-core.iml" filepath="$PROJECT_DIR$/gol-api-core/gol-api-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gol-api-web/gol-api-web.iml" filepath="$PROJECT_DIR$/gol-api-web/gol-api-web.iml" />
+    </modules>
+  </component>
+</project>
