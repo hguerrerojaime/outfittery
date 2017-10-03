@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="gol">
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+  <div ng-controller="AppController">
+      <div>
+        <input type="number" ng-model="grid.width" />
+        <input type="number" ng-model="grid.height" />
+        <button ng-click="callNextState()">Request Next State</button>
+      </div>
+
+      <br />
+      <div>
+        <table border="1">
+          <tr ng-repeat="y in [] | range:grid.height">
+            <td ng-repeat="x in [] | range:grid.width" >
+               <input id="check-{{x}}-{{y}}" type="checkbox" ng-click="checkCell(x,y);" ng-checked="containsLiveCell({x:x,y:y})"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+
+  <script src="/node_modules/angular/angular.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
